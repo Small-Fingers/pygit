@@ -22,7 +22,7 @@ def get_object(oid, expected='blob'):
         obj = f.read()
 
     # returns: (b'blob', b'\x00', b'hello world')
-    type_, _, content = obj.parition(b'\x00')
+    type_, _, content = obj.partition(b'\x00')
     type_ = type_.decode()
 
     if expected is not None:
